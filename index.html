@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ans {
+            border: 2px solid rgb(13, 13, 13);
+            width: 25px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>CALCULATOR-</h1>
+    <input type="number" id="FN" placeholder="first number">
+    <input type="number" id="SN" placeholder="second number">
+
+    <div id="ans">--</div>
+
+    <button type="button" onclick="add()">add</button>
+    <button type="button" onclick="sub()">sub</button>
+    <button type=" button" onclick="mul()">mul</button>
+    <button type=" button" onclick="div()">div</button>
+
+
+    <script>
+        const a = document.getElementById("FN");
+        const b = document.getElementById("SN");
+        const op = document.getElementById("ans");
+        let v1, v2;
+
+
+        function getElem() {
+            v1 = a.value;
+            v2 = b.value;
+
+        }
+
+        function add() {
+            getElem();
+            let jj = parseInt(v1) + parseInt(v2);
+            op.innerHTML = jj;
+
+        }
+        function sub() {
+            getElem();
+            let jj = parseInt(v1) - parseInt(v2);
+            op.innerHTML = jj;
+
+        }
+        function mul() {
+            getElem();
+            let jj = parseInt(v1) * parseInt(v2);
+            op.innerHTML = jj;
+
+        }
+        function div() {
+            getElem();
+            let jj = parseInt(v1) / parseInt(v2);
+            op.innerHTML = jj;
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
